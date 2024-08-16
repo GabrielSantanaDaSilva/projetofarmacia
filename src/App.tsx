@@ -5,7 +5,9 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
-// import ListaTemas from './components/categorias/listaCategorias/ListaCategorias';
+import ListaCategorias from './pages/categoria/ListaCategoria';
+import FormularioCategoria from './pages/categoria/FormCategoria';
+import DeletarCategoria from './pages/categoria/DeletarCategoria';
 
 
 function App() {
@@ -17,7 +19,10 @@ function App() {
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/home" element={<Home />} />
-             {/* <Route path="/categorias" element={<ListaCategorias />} /> */}
+             <Route path="/categorias" element={<ListaCategorias />} />
+             <Route path="/cadastrocategoria" element={<FormularioCategoria />} />
+             <Route path="/editarcategoria/:id" element={<FormularioCategoria />} />
+             <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
             </Routes>
           </div>
           <Footer />
